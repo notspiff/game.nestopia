@@ -1,4 +1,4 @@
-project(gameclient.nestopia)
+project(game.nestopia)
 
 cmake_minimum_required(VERSION 2.6)
 
@@ -6,7 +6,7 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 
 enable_language(CXX)
 
-find_package(xbmc REQUIRED)
+find_package(kodi REQUIRED)
 
 include(ExternalProject)
 
@@ -22,5 +22,5 @@ externalproject_add(nestopia
 set(NESTOPIA_CUSTOM_BINARY ${PROJECT_BINARY_DIR}/nestopia/src/nestopia/libretro/nestopia_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
                            nestopia_libretro${CMAKE_SHARED_LIBRARY_SUFFIX} nestopia)
 
-build_addon(gameclient.nestopia NESTOPIA DEPLIBS)
-add_dependencies(gameclient.nestopia nestopia)
+build_addon(game.nestopia NESTOPIA DEPLIBS)
+add_dependencies(game.nestopia nestopia)
