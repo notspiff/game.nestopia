@@ -24,3 +24,4 @@ set(NESTOPIA_CUSTOM_BINARY ${PROJECT_BINARY_DIR}/nestopia/src/nestopia/libretro/
 
 build_addon(game.nestopia NESTOPIA DEPLIBS)
 add_dependencies(game.nestopia nestopia)
+SET_TARGET_PROPERTIES(game.nestopia PROPERTIES LINKER_LANGUAGE CXX)
