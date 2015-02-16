@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="gameclient.nestopia"
+<addon id="game.nestopia"
 		name="Nestopia"
 		version="1.46.0"
 		provider-name="Libretro">
 	<requires>
-		<import addon="xbmc.libretro" version="1.0.0"/>
+		<import addon="xbmc.game" version="1.0.0"/>
 	</requires>
-	<extension point="xbmc.gameclient"
+	<extension point="xbmc.game"
 			library_android=""
 			library_linux="nestopia_libretro.so"
 			library_osx=""
