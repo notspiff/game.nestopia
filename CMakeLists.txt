@@ -23,5 +23,5 @@ set(NESTOPIA_CUSTOM_BINARY ${PROJECT_BINARY_DIR}/nestopia/src/nestopia/libretro/
                            nestopia_libretro${CMAKE_SHARED_LIBRARY_SUFFIX} nestopia)
 
 build_addon(game.nestopia NESTOPIA DEPLIBS)
-add_dependencies(game.nestopia nestopia)
-SET_TARGET_PROPERTIES(game.nestopia PROPERTIES LINKER_LANGUAGE CXX)
+
+include(CPack)
