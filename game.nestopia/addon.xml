@@ -4,18 +4,18 @@
 		version="1.46.0"
 		provider-name="Libretro">
 	<requires>
-		<import addon="xbmc.game" version="1.0.0"/>
+		<import addon="game.libretro" version="1.0.0"/>
 	</requires>
-	<extension point="xbmc.game"
+	<extension point="xbmc.gameclient"
 			library_android=""
-			library_linux="nestopia_libretro.so"
+			library_linux="game.nestopia.so"
 			library_osx=""
 			library_windx=""
 			library_wingl="">
 		<platforms>NES</platforms>
 		<extensions>nes|fds</extensions>
-		<allowvfs>true</allowvfs>
-		<blockextract>false</blockextract>
+		<supports_vfs>true</supports_vfs>
+		<supports_no_game>false</supports_no_game>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Nestopia v1.46</summary>
