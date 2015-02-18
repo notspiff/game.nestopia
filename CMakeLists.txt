@@ -12,7 +12,7 @@ include(ExternalProject)
 
 externalproject_add(nestopia
                     GIT_REPOSITORY https://github.com/libretro/nestopia
-                    GIT_TAG 78b403c
+                    GIT_TAG c956d46
                     PREFIX nestopia
                     CONFIGURE_COMMAND ""
                     INSTALL_COMMAND ""
