@@ -16,7 +16,7 @@ externalproject_add(nestopia
                     PREFIX nestopia
                     CONFIGURE_COMMAND ""
                     INSTALL_COMMAND ""
-                    BUILD_COMMAND make -C libretro
+                    BUILD_COMMAND make -C libretro DEBUG=1
                     BUILD_IN_SOURCE 1)
 
 set(NESTOPIA_CUSTOM_BINARY ${PROJECT_BINARY_DIR}/nestopia/src/nestopia/libretro/nestopia_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
