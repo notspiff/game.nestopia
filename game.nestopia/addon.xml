@@ -27,7 +27,7 @@ Supported files: .nes, .fds
 Icon credit: Anarkhya (anarkhya.deviantart.com)
 
 Source: https://github.com/libretro/nestopia</description>
-		<platform>linux</platform>
+		<platform>all</platform>
 		<nofanart>true</nofanart>
 		
 	</extension>
