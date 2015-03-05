@@ -1,37 +1,67 @@
+# Building add-on
 
-To build game add-ons with Kodi:
+## Linux
 
-```shell
-KODI_PREFIX=$HOME/kodi
-
-git clone -b retroplayer-15alpha1 https://github.com/garbear/xbmc.git xbmc
-cd xbmc
-./bootstrap
-./configure
-make -j8
-make install DESTDIR=$KODI_PREFIX
-make -C tools/depends/target/xbmc-game-addons/ PREFIX=$KODI_PREFIX
-cd ..
-```
-
-To build just Nestopia add-on, after doing the above:
+This assumes you start in the working directory where you've cloned the repos
 
 ```shell
-KODI_PREFIX=$HOME/kodi
-SOURCE_DIR=`pwd`/source/game.nestopia
-BUILD_DIR=`pwd`/build/game.nestopia
-
-mkdir -p $SOURCE_DIR $BUILD_DIR
-git clone https://github.com/garbear/game.nestopia.git $SOURCE_DIR
-cd $BUILD_DIR
-cmake $SOURCE_DIR -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=$KODI_PREFIX -DCMAKE_INSTALL_PREFIX=$KODI_PREFIX
-
-# or, for Eclipse 4.4 project files:
-
-cmake $SOURCE_DIR -G"Eclipse CDT4 - Unix Makefiles" -D_ECLIPSE_VERSION=4.4 -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=$KODI_PREFIX -DCMAKE_INSTALL_PREFIX=$KODI_PREFIX
-
-# and then
-
-make
+git clone https://github.com/garbear/xbmc.git
+git clone https://github.com/kodi-game/game.nestopia.git
 ```
+
+Create a build directory
+
+```shell
+cd game.nestopia
+mkdir build
+cd build
+```
+
+Generate a build environment with config for debugging
+
+```shell
+XBMC_SRC=`pwd`/../../xbmc
+
+cmake -DADDONS_TO_BUILD=game.nestopia \
+      -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_INSTALL_PREFIX=$XBMC_SRC/addons \
+      -DPACKAGE_ZIP=1 \
+      $XBMC_SRC/project/cmake/addons
+
+### OR, for Eclipse 4.4 project files
+
+cmake -G"Eclipse CDT4 - Unix Makefiles" \
+      -D_ECLIPSE_VERSION=4.4 \
+      -DADDONS_TO_BUILD=game.nestopia \
+      -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_INSTALL_PREFIX=$XBMC_SRC/addons \
+      -DPACKAGE_ZIP=1 \
+      $XBMC_SRC/project/cmake/addons
+```
+
+## Windows
+
+To build on windows, change to the addons folder:
+
+```batch
+cd D:\Projects\xbmx\xbmc\project\cmake\addons
+```
+
+Generate Visual Studio 2013 solution
+
+```batch
+cmake -DADDONS_TO_BUILD=game.nestopia -DADDON_SRC_PREFIX="D:\Projects\demo" -DCMAKE_BUILD_TYPE=Debug -G "Visual Studio 12"  -DCMAKE_USER_MAKE_RULES_OVERRIDE="D:\Projects\xbmx\xbmc\project\cmake\scripts\windows\c-flag-overrides.cmake" -DCMAKE_USER_MAKE_RULES_OVERRIDE_CXX="D:\Projects\xbmx\xbmc\project\cmake\scripts\windows\cxx-flag-overrides.cmake" -DCMAKE_INSTALL_PREFIX="D:\Projects\xbmx\xbmc\adons" -DPACKAGE_ZIP=1
+```
+
+Open Visual Studio, load and build this solution:
+
+```
+D:\Projects\xbmx\xbmc\project\cmake\addons\kodi-addons.sln
+```
+
+Altarnatively, copy [prepare-addons-dev.bat](https://gist.github.com/Montellese/149ecbd5ca20941d2be4) into tools/buildsteps/win32 and execute it from there. If you want to execute it from somewhere else you need to adjust the default value of WORKDIR in the batch file.
+
+Available options are:
+* **clean** to simply clean the whole generated buildsystem
+* **&lt;addon-id>** to only generate the buildsystem for that addon
 
