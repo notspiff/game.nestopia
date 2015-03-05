@@ -10,14 +10,16 @@ find_package(kodi REQUIRED)
 
 include(ExternalProject)
 
-set(DEBUG_FLAG DEBUG=1)
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  set(LIBRETRO_DEBUG DEBUG=1)
+endif()
 
 if("${CORE_SYSTEM_NAME}" STREQUAL "windows")
-  set(BUILD_COMMAND mingw32-make -C libretro platform=win ${DEBUG_FLAG})
+  set(BUILD_COMMAND mingw32-make -C libretro platform=win ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "linux")
-  set(BUILD_COMMAND make -C libretro ${DEBUG_FLAG})
+  set(BUILD_COMMAND make -C libretro ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "darwin")
-  # TODO
+  set(BUILD_COMMAND make -C libretro platform=osx ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "ios")
   # TODO
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "android")
