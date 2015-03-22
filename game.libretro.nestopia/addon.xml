@@ -7,7 +7,7 @@
 		<import addon="game.libretro" version="1.0.0"/>
 		<import addon="game.controller.nes" version="1.0.0"/>
 	</requires>
-	<extension point="xbmc.gameclient"
+	<extension point="kodi.gameclient"
 			library_android="game.libretro.nestopia.so"
 			library_linux="game.libretro.nestopia.so"
 			library_osx="game.libretro.nestopia.dylib"
