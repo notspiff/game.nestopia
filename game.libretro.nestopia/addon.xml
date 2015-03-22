@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="game.nestopia"
+<addon id="game.libretro.nestopia"
 		name="NES (Nestopia)"
 		version="1.46.0"
 		provider-name="Libretro">
@@ -8,11 +8,11 @@
 		<import addon="game.controller.nes" version="1.0.0"/>
 	</requires>
 	<extension point="xbmc.gameclient"
-			library_android="game.nestopia.so"
-			library_linux="game.nestopia.so"
-			library_osx="game.nestopia.dylib"
-			library_windx="game.nestopia.dll"
-			library_wingl="game.nestopia.dll">
+			library_android="game.libretro.nestopia.so"
+			library_linux="game.libretro.nestopia.so"
+			library_osx="game.libretro.nestopia.dylib"
+			library_windx="game.libretro.nestopia.dll"
+			library_wingl="game.libretro.nestopia.dll">
 		<platforms>NES</platforms>
 		<extensions>nes|fds</extensions>
 		<supports_vfs>true</supports_vfs>
