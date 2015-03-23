@@ -1,4 +1,4 @@
-project(game.nestopia)
+project(game.libretro.nestopia)
 
 cmake_minimum_required(VERSION 2.6)
 
@@ -40,7 +40,7 @@ externalproject_add(nestopia
                     BUILD_IN_SOURCE 1)
 
 set(NESTOPIA_CUSTOM_BINARY ${PROJECT_BINARY_DIR}/nestopia/src/nestopia/libretro/nestopia_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
-                           game.nestopia${CMAKE_SHARED_LIBRARY_SUFFIX} nestopia)
+                           game.libretro.nestopia${CMAKE_SHARED_LIBRARY_SUFFIX} nestopia)
 
-build_addon(game.nestopia NESTOPIA DEPLIBS)
-add_dependencies(game.nestopia nestopia)
+build_addon(game.libretro.nestopia NESTOPIA DEPLIBS)
+add_dependencies(game.libretro.nestopia nestopia)

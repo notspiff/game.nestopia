@@ -1,4 +1,4 @@
-# game.nestopia
+# game.libretro.nestopia
 
 Nestopia is a portable open source NES/Famicom emulator. It is designed to be as accurate as possible and supports a large number of peripherals. The hardware is emulated at cycle-by-cycle granularity, ensuring full support for software that does mid-scanline and other timing trickery.
 
@@ -9,8 +9,8 @@ Nestopia is a portable open source NES/Famicom emulator. It is designed to be as
 Clone the repo and create a build directory
 
 ```shell
-git clone https://github.com/kodi-game/game.nestopia.git
-cd game.nestopia
+git clone https://github.com/kodi-game/game.libretro.nestopia.git
+cd game.libretro.nestopia
 mkdir build
 cd build
 ```
@@ -18,20 +18,20 @@ cd build
 Generate a build environment with config for debugging
 
 ```shell
-cmake -DADDONS_TO_BUILD=game.nestopia \
+cmake -DADDONS_TO_BUILD=game.libretro.nestopia \
       -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_INSTALL_PREFIX=$HOME/workspace/xbmc/addons \
       $HOME/workspace/xbmc/project/cmake/addons
 ```
 
-If you are developing in Eclipse, you can create a "makefile project with existing code" using `game.nestopia/` as the existing code location. To build, enter Properties -> "C/C++ Build" and change the build command to `make -C build`.
+If you are developing in Eclipse, you can create a "makefile project with existing code" using `game.libretro.nestopia/` as the existing code location. To build, enter Properties -> "C/C++ Build" and change the build command to `make -C build`.
 
 It is also possible to generate Eclipse project files with cmake
 
 ```shell
 cmake -G"Eclipse CDT4 - Unix Makefiles" \
       -D_ECLIPSE_VERSION=4.4 \
-      -DADDONS_TO_BUILD=game.nestopia \
+      -DADDONS_TO_BUILD=game.libretro.nestopia \
       -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_INSTALL_PREFIX=$HOME/workspace/xbmc/addons \
       $HOME/workspace/xbmc/project/cmake/addons
@@ -39,7 +39,7 @@ cmake -G"Eclipse CDT4 - Unix Makefiles" \
 
 # Building in-tree (cross-compiling)
 
-Kodi's build system will fetch the add-on from the GitHub URL and git hash specified in [game.nestopia.txt](https://github.com/garbear/xbmc/blob/retroplayer-15alpha2/project/cmake/addons/addons/game.nestopia/game.nestopia.txt).
+Kodi's build system will fetch the add-on from the GitHub URL and git hash specified in [game.libretro.nestopia.txt](https://github.com/garbear/xbmc/blob/retroplayer-15alpha2/project/cmake/addons/addons/game.libretro.nestopia/game.libretro.nestopia.txt).
 
 ## Linux
 
@@ -52,13 +52,13 @@ make install DESTDIR=$HOME/kodi
 Build the add-on
 
 ```shell
-make -C tools/depends/target/binary-addons PREFIX=$HOME/kodi ADDONS="game.nestopia"
+make -C tools/depends/target/binary-addons PREFIX=$HOME/kodi ADDONS="game.libretro.nestopia"
 ```
 
 The compiled .so can be found at
 
 ```
-$HOME/kodi/lib/kodi/addons/game.nestopia/game.nestopia.so
+$HOME/kodi/lib/kodi/addons/game.libretro.nestopia/game.libretro.nestopia.so
 ```
 
 To rebuild the add-on or compile a different one, clean the build directory
@@ -89,7 +89,7 @@ Per [README.osx](https://github.com/garbear/xbmc/blob/retroplayer-15alpha2/docs/
 
 ```shell
 cd tools/depends
-make -C target/binary-addons ADDONS="game.nestopia"
+make -C target/binary-addons ADDONS="game.libretro.nestopia"
 ```
 
 To rebuild the add-on or compile a different one, clean the build directory
