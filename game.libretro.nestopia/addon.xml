@@ -8,7 +8,7 @@
 		<import addon="game.controller.nes" version="1.0.0"/>
 	</requires>
 	<extension point="kodi.gameclient"
-			library_android="game.libretro.nestopia.so"
+			library_android="libgame.libretro.nestopia.so"
 			library_linux="game.libretro.nestopia.so"
 			library_osx="game.libretro.nestopia.dylib"
 			library_windx="game.libretro.nestopia.dll"
@@ -29,6 +29,5 @@ Icon credit: Anarkhya (anarkhya.deviantart.com)
 Source: https://github.com/libretro/nestopia</description>
 		<platform>all</platform>
 		<nofanart>true</nofanart>
-		
 	</extension>
 </addon>
