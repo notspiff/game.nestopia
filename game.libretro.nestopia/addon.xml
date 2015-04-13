@@ -24,9 +24,9 @@
 
 Supported files: .nes, .fds
 
-Icon credit: Anarkhya (anarkhya.deviantart.com)
+License: GPLv2
 
-Source: https://github.com/libretro/nestopia</description>
+Icon credit: Anarkhya (anarkhya.deviantart.com)</description>
 		<platform>all</platform>
 		<nofanart>true</nofanart>
 	</extension>
