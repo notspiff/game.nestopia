@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buttonmap>
-	<device id="game.controller.nes" type="joypad">
+	<controller id="game.controller.nes" type="joypad">
 		<feature name="a" mapto="a"/>
 		<feature name="b" mapto="b"/>
 		<feature name="start" mapto="start"/>
@@ -9,9 +9,8 @@
 		<feature name="down" mapto="down"/>
 		<feature name="right" mapto="right"/>
 		<feature name="left" mapto="left"/>
-	</device>
-	<device id="game.lightgun.nes.zapper" type="lightgun">
+	</controller>
+	<controller id="game.controller.nes.zapper" type="lightgun">
 		<feature name="trigger" mapto="trigger"/>
-		<feature name="turbo" mapto="turbo"/>
-	</device>
+	</controller>
 </buttonmap>
