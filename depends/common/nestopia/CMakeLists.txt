@@ -20,13 +20,15 @@ elseif("${CORE_SYSTEM_NAME}" STREQUAL "linux")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "darwin")
   set(BUILD_COMMAND make -C libretro platform=osx ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "ios")
-  # TODO
+  message(FATAL_ERROR "${PROJECT_NAME} needs IOS build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "android")
-  # TODO
+  message(FATAL_ERROR "${PROJECT_NAME} needs Android build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "rbpi")
-  # TODO
+  message(FATAL_ERROR "${PROJECT_NAME} needs RPi build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "freebsd")
-# TODO
+  message(FATAL_ERROR "${PROJECT_NAME} needs FreeBSD build command in CMakeLists.txt!")
+else()
+  message(FATAL_ERROR "${PROJECT_NAME} - Unknown system: ${CORE_SYSTEM_NAME}")
 endif()
 
 externalproject_add(nestopia
