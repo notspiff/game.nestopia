@@ -1,1 +1,1 @@
-nestopia https://github.com/libretro/nestopia c956d46
+nestopia https://github.com/libretro/nestopia master
