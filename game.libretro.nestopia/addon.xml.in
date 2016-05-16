@@ -9,10 +9,7 @@
 		<import addon="game.controller.nes.zapper" version="1.0.0" optional="true"/>
 	</requires>
 	<extension point="kodi.gameclient"
-			library_android="libgame.libretro.nestopia.so"
-			library_linux="game.libretro.nestopia.so"
-			library_osx="game.libretro.nestopia.dylib"
-			library_windx="game.libretro.nestopia.dll">
+			library_@PLATFORM@="@LIBRARY_FILENAME@">
 		<platforms>NES</platforms>
 		<extensions>nes|fds</extensions>
 		<supports_vfs>true</supports_vfs>
@@ -27,7 +24,7 @@ Supported files: .nes, .fds
 License: GPLv2
 
 Icon credit: Anarkhya (anarkhya.deviantart.com)</description>
-		<platform>all</platform>
+		<platform>@PLATFORM@</platform>
 		<nofanart>true</nofanart>
 	</extension>
 </addon>
