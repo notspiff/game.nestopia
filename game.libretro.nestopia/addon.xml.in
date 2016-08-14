@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.nestopia"
 		name="NES (Nestopia)"
-		version="1.46.0"
+		version="1.48.0"
 		provider-name="Libretro">
 	<requires>
 		<import addon="game.libretro" version="1.0.0"/>
@@ -13,17 +13,17 @@
 		<platforms>NES</platforms>
 		<extensions>nes|fds</extensions>
 		<supports_vfs>true</supports_vfs>
-		<supports_no_game>false</supports_no_game>
+		<supports_standalone>false</supports_standalone>
+		<supports_keyboard>false</supports_keyboard>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Nestopia v1.46</summary>
+		<summary lang="en">Nestopia v1.48-WIP</summary>
 		<description>Nestopia is a portable open source NES/Famicom emulator. It is designed to be as accurate as possible and supports a large number of peripherals. The hardware is emulated at cycle-by-cycle granularity, ensuring full support for software that does mid-scanline and other timing trickery.
 
 Supported files: .nes, .fds
 
-License: GPLv2
-
 Icon credit: Anarkhya (anarkhya.deviantart.com)</description>
+		<license>GPLv2</license>
 		<platform>@PLATFORM@</platform>
 		<nofanart>true</nofanart>
 	</extension>
