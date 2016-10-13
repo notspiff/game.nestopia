@@ -1,16 +1,13 @@
+cmake_minimum_required(VERSION 3.1)
 project(game.libretro.nestopia)
 
-cmake_minimum_required(VERSION 2.6)
-
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
-
-enable_language(CXX)
 
 find_package(Kodi REQUIRED)
 find_package(libretro-nestopia REQUIRED)
 
 set(DEPLIBS nestopia)
 set(NESTOPIA_CUSTOM_BINARY ${NESTOPIA_LIB}
-                           game.libretro.nestopia${CMAKE_SHARED_LIBRARY_SUFFIX} nestopia)
+                           ${PROJECT_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX})
 
-build_addon(game.libretro.nestopia NESTOPIA DEPLIBS)
+build_addon(${PROJECT_NAME} NESTOPIA DEPLIBS)
