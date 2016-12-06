@@ -1,14 +1,14 @@
-# XBMC Media Center language file
-# Addon Name: NES / Famicom (NEStopia)
-# Addon id: gameclient.nestopia
-# Addon Provider: Martin Freij
+# game.libretro.nestopia language file
+# Addon Name: game.libretro.nestopia
+# Addon id: game.libretro.nestopia
+# Addon Provider: libretro
 msgid ""
 msgstr ""
-"Project-Id-Version: Libretro Clients\n"
+"Project-Id-Version: game.libretro.nestopia\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: 2014-05-30 17:00+8\n"
-"PO-Revision-Date: 2014-05-30 17:00+8\n"
-"Last-Translator: XBMC Translation Team\n"
+"POT-Creation-Date: 2016-12-06 21:53i\n"
+"PO-Revision-Date: 2016-12-06 21:53i\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,13 +21,45 @@ msgid "Settings"
 msgstr ""
 
 msgctxt "#30001"
-msgid "Blargg NTSC filter"
+msgid "Preferred aspect ratio"
 msgstr ""
 
 msgctxt "#30002"
-msgid "Palette"
+msgid "Blargg NTSC filter"
 msgstr ""
 
 msgctxt "#30003"
+msgid "Favored System"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Automatically insert first FDS disk on reset"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Game Genie Sound Distortion"
+msgstr ""
+
+msgctxt "#30006"
 msgid "Remove 8-sprites-per-scanline hardware limit"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Mask Overscan (Horizontal)"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Mask Overscan (Vertical)"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Palette"
+msgstr ""
+
+msgctxt "#30010"
+msgid "RAM Power-on State"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Turbo Pulse Speed"
 msgstr ""
