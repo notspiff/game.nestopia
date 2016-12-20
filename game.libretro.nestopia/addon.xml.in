@@ -18,7 +18,7 @@
 		<supports_mouse>false</supports_mouse>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">NES / Famicom (Nestopia UE) 1.48-WIP b5f4f51</summary>
+		<summary lang="en">NES / Famicom (Nestopia UE) 1.48-WIP</summary>
 		<description>Nestopia is a portable open source NES/Famicom emulator. It is designed to be as accurate as possible and supports a large number of peripherals. The hardware is emulated at cycle-by-cycle granularity, ensuring full support for software that does mid-scanline and other timing trickery.
 
 Supported files: .nes, .fds, .unf, .unif
