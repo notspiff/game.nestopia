@@ -9,7 +9,7 @@
 		<setting label="30006" type="select" id="nestopia_nospritelimit" values="disabled|enabled" default="disabled"/>
 		<setting label="30007" type="select" id="nestopia_overscan_h" values="disabled|enabled" default="disabled"/>
 		<setting label="30008" type="select" id="nestopia_overscan_v" values="enabled|disabled" default="enabled"/>
-		<setting label="30009" type="select" id="nestopia_palette" values="consumer|canonical|alternative|rgb|cxa2025as|pal|composite-direct-fbx|pvm-style-fbx|original-hardware-fbx|nes-classic-fbx-fs|raw|custom" default="consumer"/>
+		<setting label="30009" type="select" id="nestopia_palette" values="consumer|canonical|alternative|rgb|cxa2025as|pal|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|raw|custom" default="consumer"/>
 		<setting label="30010" type="select" id="nestopia_ram_power_state" values="0x00|0xFF|random" default="0x00"/>
 		<setting label="30011" type="select" id="nestopia_turbo_pulse" values="2|3|4|5|6|7|8|9" default="2"/>
 	</category>
