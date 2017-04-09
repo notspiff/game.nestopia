@@ -21,9 +21,9 @@
 		<summary lang="en">NES / Famicom (Nestopia UE) 1.48-WIP</summary>
 		<description>Nestopia is a portable open source NES/Famicom emulator. It is designed to be as accurate as possible and supports a large number of peripherals. The hardware is emulated at cycle-by-cycle granularity, ensuring full support for software that does mid-scanline and other timing trickery.
 
-Supported files: .nes, .fds, .unf, .unif
+Icon credit: Anarkhya (anarkhya.deviantart.com)
 
-Icon credit: Anarkhya (anarkhya.deviantart.com)</description>
+Supported files: .nes, .fds, .unf, .unif</description>
 		<license>GPLv2</license>
 		<platform>@PLATFORM@</platform>
 		<assets>
